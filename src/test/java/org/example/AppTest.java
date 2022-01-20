@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.triangle.Point;
 import org.example.triangle.Triangle;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -32,6 +33,15 @@ class AppTest {
         boolean result = triangle.isScalene();
         // Assert
         assertFalse(result, "Triangle with side-lengths of 3 and a base of 5 should not be scalene");
-
+    }
+    @Test
+    @DisplayName("Triangle with corners at (0,0), (0,2) and (2,-2) is isosceles")
+    void triangleWithsSidesOf6IsIsosceles() {
+        // Arrange
+        Triangle triangle = new Triangle(new Point[]{new Point(0,0), new Point(0,2), new Point(2,-2)});
+        // Act
+        boolean result = triangle.isIsosceles();
+        // Assert
+        assertTrue(result);
     }
 }
