@@ -4,6 +4,5 @@ public class Brackets {
 
     public boolean isValid(String s) {
         return false;
-
     }
 }
