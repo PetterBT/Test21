@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class Calculator {
     public static int add(String numbers) {
         if (!numbers.isEmpty()) {
-            List<Integer> numbersList =Arrays.stream(numbers.split(","))
+            List<Integer> numbersList =Arrays.stream(numbers.split("[,\n]"))
                     .map(Integer::parseInt)
                     .collect(Collectors.toList());
 

@@ -21,15 +21,15 @@ public class CalculatorTest {
         assertThat(Calculator.add("2,6")).isEqualTo(8);
     }
     @Test
-    void should_return3() {
-        assertThat(Calculator.add("")).isEqualTo(0);
+    void should_return_sum_of_all_numbers() {
+        assertThat(Calculator.add("1,2,3,50,944")).isEqualTo(1000);
     }
     @Test
-    void should_return4() {
-        assertThat(Calculator.add("")).isEqualTo(0);
+    void should_accept_new_line_instead_of_comma() {
+        assertThat(Calculator.add("2\n6,2")).isEqualTo(10);
     }
     @Test
-    void should_return5() {
+    void should_ret() {
         assertThat(Calculator.add("")).isEqualTo(0);
     }
 
