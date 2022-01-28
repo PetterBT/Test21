@@ -9,16 +9,16 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class CalculatorTest {
 
     @Test
-    void should_return_zero_when_given_empty_string() {
+    void empty_string_should_return_zero() {
         assertThat(Calculator.add("")).isEqualTo(0);
     }
     @Test
-    void should_return_one_when_given_one_as_input() {
+    void ten_should_return_ten() {
         assertThat(Calculator.add("1")).isEqualTo(1);
     }
     @Test
-    void should_return2() {
-        assertThat(Calculator.add("")).isEqualTo(0);
+    void two_and_six_should_return_eight() {
+        assertThat(Calculator.add("2,6")).isEqualTo(8);
     }
     @Test
     void should_return3() {
